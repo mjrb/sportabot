@@ -1,0 +1,24 @@
+<html>
+  <script
+     src="https://code.jquery.com/jquery-3.2.1.min.js"
+     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+     crossorigin="anonymous"></script>
+  <script>
+    function go(){
+    $.ajax({
+      url: "/sportabot2.php",
+      contentType: "json",
+      type: "post",
+      //this seems kind of hacky, but it makes the POST look like Groupme's POSTs
+      data: "{\"name:\"echo\",\"text\":\""+$("#data").value+"\"}",
+      success: function(result){
+        $("#result")[0].innerHTML=result;
+      }
+    });
+      
+  }
+  </script>
+  <input id="data" type="text" name="data" placeholder="message" />
+  <input type="submit" onclick="go();" />
+  <div id="result"></div>
+</html>
