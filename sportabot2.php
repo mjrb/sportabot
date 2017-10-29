@@ -48,7 +48,7 @@ function contains($message, $str){
 
 //you can get your own bot id from https://dev.groupme.com/bots
 //i dont have one here because i dont want random people on the internet sending messages from my bot
-$botid = "b7851c0d56cf4043f58582ba15";
+$botid = "<groupmebotid>";
 //if you name your bot somthing else in the groupme diolog put the name here
 $bot_name = "sportabot";
 
